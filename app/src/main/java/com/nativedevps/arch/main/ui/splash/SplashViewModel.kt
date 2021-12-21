@@ -1,8 +1,7 @@
-package com.nativedevps.mlm.main.ui.splash
+package com.nativedevps.arch.main.ui.splash
 
 import android.app.Application
 import android.util.Log
-import com.nativedevps.domain.datasources.local.IPreferencesDataSource
 import com.nativedevps.domain.datasources.local.SettingsConfigurationSource
 import com.nativedevps.domain.datasources.remote.firebase.FirebaseAuthenticationService
 import com.nativedevps.domain.model.configuration.AppConfiguration

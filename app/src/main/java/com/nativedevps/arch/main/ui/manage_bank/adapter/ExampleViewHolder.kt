@@ -1,10 +1,10 @@
-package com.nativedevps.mlm.main.ui.manage_bank.adapter
+package com.nativedevps.arch.main.ui.manage_bank.adapter
 
 import com.bumptech.glide.Glide
 import com.bumptech.glide.signature.ObjectKey
 import com.nativedevps.domain.model.example_list.ExampleApiModelItem
-import com.nativedevps.mlm.R
-import com.nativedevps.mlm.databinding.ItemExampleListBinding
+import com.nativedevps.arch.R
+import com.nativedevps.arch.databinding.ItemExampleListBinding
 import com.nativedevps.support.base_class.BaseViewHolder
 
 class ExampleViewHolder(

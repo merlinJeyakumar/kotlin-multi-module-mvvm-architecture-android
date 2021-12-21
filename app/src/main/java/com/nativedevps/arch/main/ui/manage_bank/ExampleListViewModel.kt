@@ -1,4 +1,4 @@
-package com.nativedevps.mlm.main.ui.manage_bank
+package com.nativedevps.arch.main.ui.manage_bank
 
 import android.app.Application
 import com.nativedevps.domain.datasources.local.SettingsConfigurationSource
@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 @HiltViewModel
-class ManageBankViewModel @Inject constructor(application: Application) :
+class ExampleListViewModel @Inject constructor(application: Application) :
     BaseViewModel(application) {
 
     @Inject

@@ -1,10 +1,10 @@
-package com.nativedevps.mlm.main.ui.manage_bank.adapter
+package com.nativedevps.arch.main.ui.manage_bank.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.nativedevps.domain.model.example_list.ExampleApiModelItem
-import com.nativedevps.mlm.databinding.ItemExampleListBinding
+import com.nativedevps.arch.databinding.ItemExampleListBinding
 import com.nativedevps.support.base_class.BaseAdapter2
 import com.nativedevps.support.base_class.BaseViewHolder
 

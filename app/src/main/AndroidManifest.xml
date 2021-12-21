@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.nativedevps.mlm">
+    package="com.nativedevps.arch">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.nativedevps.mlm.main.BaseApplication"
+        android:name="com.nativedevps.arch.main.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,7 +19,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name="com.nativedevps.mlm.main.ui.splash.SplashActivity">
+        <activity android:name="com.nativedevps.arch.main.ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,12 +27,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".main.ui.main.MainActivity"
+            android:name="com.nativedevps.arch.main.ui.main.MainActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:exported="true"
             android:enabled="true"
-            android:name=".main.ui.manage_bank.ExampleListActivity"
+            android:name="com.nativedevps.arch.main.ui.manage_bank.ExampleListActivity"
             android:configChanges="orientation" />
     </application>
 

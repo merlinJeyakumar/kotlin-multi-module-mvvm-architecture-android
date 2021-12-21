@@ -1,14 +1,14 @@
-package com.nativedevps.mlm.main.ui.manage_bank
+package com.nativedevps.arch.main.ui.manage_bank
 
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.asLiveData
 import com.nativedevps.domain.model.example_list.ExampleApiModelItem
-import com.nativedevps.mlm.R
-import com.nativedevps.mlm.databinding.ActivityExampleListBinding
-import com.nativedevps.mlm.main.ui.manage_bank.adapter.ExampleAdapter
-import com.nativedevps.mlm.main.ui.splash.SplashActivity
+import com.nativedevps.arch.R
+import com.nativedevps.arch.databinding.ActivityExampleListBinding
+import com.nativedevps.arch.main.ui.manage_bank.adapter.ExampleAdapter
+import com.nativedevps.arch.main.ui.splash.SplashActivity
 import com.nativedevps.support.base_class.ActionBarActivity
 import com.nativedevps.support.utility.view.DialogBox.confirmationDialog
 import com.nativedevps.support.utility.view.DialogBox.listDialog
@@ -16,9 +16,9 @@ import dagger.hilt.android.AndroidEntryPoint
 import org.jetbrains.anko.toast
 
 @AndroidEntryPoint
-class ExampleListActivity : ActionBarActivity<ActivityExampleListBinding, ManageBankViewModel>(
+class ExampleListActivity : ActionBarActivity<ActivityExampleListBinding, ExampleListViewModel>(
     R.layout.activity_example_list,
-    ManageBankViewModel::class.java
+    ExampleListViewModel::class.java
 ), ExampleAdapter.ItemListener {
 
     private var alertDialog: AlertDialog? = null

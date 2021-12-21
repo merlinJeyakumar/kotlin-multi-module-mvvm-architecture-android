@@ -10,7 +10,7 @@ import javax.inject.Inject
 class RestRepository @Inject constructor(private val restService: RestService) :
     RestDataSource {
     override suspend fun updateProfile(updateSendModel: UpdateSendModel): UpdateProfileModel? {
-        return restService.update(updateSendModel)
+        return restService.update() //no parameter required for this api.
     }
 
     override suspend fun getExampleList(): ExampleApiModel? {

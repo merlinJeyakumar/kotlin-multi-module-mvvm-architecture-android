@@ -1,4 +1,4 @@
-package com.nativedevps.mlm.main.di
+package com.nativedevps.arch.main.di
 
 import com.nativedevps.data.di.ConfigurationModule
 import com.nativedevps.data.di.DatabaseModule

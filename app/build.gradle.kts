@@ -91,7 +91,5 @@ dependencies {
     firebaseLibraries()
     thirdPartyLibraries()
     testLibraries()
-    implementation("de.blox.treeview:treeview:0.1.3")
-    implementation("com.otaliastudios:zoomlayout:1.9.0")
     testImplementation(kotlin("test"))
 }

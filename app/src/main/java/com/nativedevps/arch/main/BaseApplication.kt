@@ -1,4 +1,4 @@
-package com.nativedevps.mlm.main
+package com.nativedevps.arch.main
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
