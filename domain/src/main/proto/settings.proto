@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "com.nativedevps.domain.model.configuration";
+option java_multiple_files = true;
+
+message UserProfile {
+  string emailId = 8;
+  int32 id = 11;
+  string firstName = 10;
+  string lastName = 13;
+}
+
+message AppConfiguration {
+  string option1 = 1;
+}

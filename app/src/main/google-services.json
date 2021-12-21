@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "148115141694",
+    "firebase_url": "https://mlm-anainfo-default-rtdb.firebaseio.com",
+    "project_id": "mlm-anainfo",
+    "storage_bucket": "mlm-anainfo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148115141694:android:b462c245f32b7a7df5cd6f",
+        "android_client_info": {
+          "package_name": "com.nativedevps.mlm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148115141694-3k1b4usrso8shgfltbonms3cu5o259mj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2Kql2iHuMcgROZr9ktXpnxlq2EhA9hj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148115141694-3k1b4usrso8shgfltbonms3cu5o259mj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

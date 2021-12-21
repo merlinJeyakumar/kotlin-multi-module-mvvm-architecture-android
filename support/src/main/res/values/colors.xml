@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="gray">#CACACA</color>
+    <color name="trans_gray">#88979797</color>
+    <color name="trans_black">#B3000000</color>
+    <color name="whiteLight">#FFF0E8</color>
+    <color name="whiteLightTrans">#88FFF9F5</color>
+    <color name="whiteLightChatTrans">#F7F7F7</color>\
+    <color name="colorBlackTrans_50">#66000000</color>
+    <color name="colorBlackTrans_25">#40000000</color>
+    <color name="black_smoke">#454242</color>
+    <color name="shimmer">#32e6e6e6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="solidGreen">#00C853</color>
+    <color name="color_background">#eceff1</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorLink">#0645AD</color>
+</resources>

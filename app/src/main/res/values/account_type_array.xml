@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="account_type_array">
+        <item>Savings/Current</item>
+        <item>Over Draft</item>
+        <item>Cash Credit</item>
+        <item>NRE</item>
+        <item>Loan Account</item>
+    </string-array>
+</resources>
