@@ -1,4 +1,4 @@
-package com.nativedevps.arch.main.ui.manage_bank
+package com.nativedevps.arch.main.ui.example_list
 
 import android.app.Application
 import com.nativedevps.domain.datasources.local.SettingsConfigurationSource

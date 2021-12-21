@@ -1,4 +1,4 @@
-package com.nativedevps.arch.main.ui.manage_bank.adapter
+package com.nativedevps.arch.main.ui.example_list.adapter
 
 import com.bumptech.glide.Glide
 import com.bumptech.glide.signature.ObjectKey

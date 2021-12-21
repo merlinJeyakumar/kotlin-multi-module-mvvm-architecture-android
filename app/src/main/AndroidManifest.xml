@@ -32,7 +32,7 @@
         <activity
             android:exported="true"
             android:enabled="true"
-            android:name="com.nativedevps.arch.main.ui.manage_bank.ExampleListActivity"
+            android:name="com.nativedevps.arch.main.ui.example_list.ExampleListActivity"
             android:configChanges="orientation" />
     </application>
 
