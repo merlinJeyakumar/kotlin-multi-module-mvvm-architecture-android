@@ -57,7 +57,7 @@ class ExampleListActivity : ActionBarActivity<ActivityExampleListBinding, Exampl
     }
 
     private fun initPreview() {
-        setTitle(getString(R.string.bank_management))
+        setTitle("Example List")
         setNavigateUpEnabled(true)
     }
 
@@ -72,8 +72,8 @@ class ExampleListActivity : ActionBarActivity<ActivityExampleListBinding, Exampl
         }
         alertDialog =
             listDialog(title = null, stringList = listOf(
-                Pair(nativedevps.support.R.drawable.ic_baseline_delete_24,
-                    getString(R.string.delete))
+                Pair(R.drawable.ic_baseline_delete_24,
+                    "delete")
             ), callback = { success, posText ->
                 alertDialog = null
                 if (success) {

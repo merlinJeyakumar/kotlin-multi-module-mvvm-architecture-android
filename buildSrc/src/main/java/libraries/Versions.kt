@@ -29,16 +29,16 @@ object Versions {
 
     // Support Libraries
     const val constraintLayoutVersion = "2.0.4"
-    const val materialVersion = "1.5.0-alpha04" //todo: https://github.com/material-components/material-components-android/releases
+    const val materialVersion = "1.5.0-beta01" //todo: https://github.com/material-components/material-components-android/releases
     const val support_design = "28.0.0"
     const val sdp_android = "1.0.6"
     const val recyclerView = "1.3.0-alpha01" //todo: https://androidx.tech/artifacts/recyclerview/recyclerview/
     const val card_view = "1.0.0"
     const val material_design = "1.1.0-beta02" //todo: https://github.com/material-components/material-components-android/releases
     const val legacy_support = "1.0.0"
-    const val paging_runtime = "3.1.0-alpha04" //todo: https://androidx.tech/artifacts/paging/paging-runtime/
+    const val paging_runtime = "3.1.0" //https://androidx.tech/artifacts/paging/paging-runtime/
     const val paging_rxjava3 = "3.0.1"
-    const val viewpager2 = "1.0.0-beta04" //todo: https://androidx.tech/artifacts/viewpager2/viewpager2/
+    const val viewpager2 = "1.1.0-beta01" //todo: https://androidx.tech/artifacts/viewpager2/viewpager2/
     const val lottie = "3.2.0"
     const val shimmer = "0.4.0"
     const val libPhoneNumber = "8.3.1"
