@@ -71,10 +71,10 @@ android {
 
     productFlavors {
         create("production") {
-            applicationId = "com.nativedevps.mlm"
+            applicationId = "com.nativedevps.arch"
         }
         create("development") {
-            applicationId = "com.nativedevps.mlm.development"
+            applicationId = "com.nativedevps.arch.development"
         }
     }
 }
