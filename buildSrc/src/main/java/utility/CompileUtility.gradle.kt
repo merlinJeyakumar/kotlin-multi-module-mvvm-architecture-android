@@ -11,3 +11,7 @@ fun DependencyHandler.api(s: String) {
 fun DependencyHandler.kapt(s: String) {
     add("kapt", s)
 }
+
+fun DependencyHandler.loadProject(s: String) {
+    add("project", s)
+}
