@@ -1,3 +1,4 @@
+rootProject.name = 'Peace'
 include ':app', ':support', ':data', ':domain'
 project(':support').projectDir = new File(rootDir, 'support')
 project(':data').projectDir = new File(rootDir, 'data')
