@@ -24,8 +24,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":support"))
-    implementation(project(":domain"))
+    implementation(project(ProjectRootLibraries.domain))
+    implementation(project(ProjectRootLibraries.support))
     requiredLibraries()
     supportLibraries()
     roomLibraries()

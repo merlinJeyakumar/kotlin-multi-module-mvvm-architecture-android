@@ -13,6 +13,9 @@ object ProjectRootLibraries {
         "com.google.firebase:perf-plugin:${Configs.classpathFirebasePerfs}"
     const val classpathCrashlytics =
         "com.google.firebase:firebase-crashlytics-gradle:${Configs.classpathCrashlytics}"
+    const val support = ":support"
+    const val data = ":data"
+    const val domain = ":domain"
 }
 
 object RequiredLibraries {

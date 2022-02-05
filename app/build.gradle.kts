@@ -80,9 +80,9 @@ android {
 }
 
 dependencies {
-    implementation(project(":support"))
-    implementation(project(":data"))
-    implementation(project(":domain"))
+    implementation(project(ProjectRootLibraries.data))
+    implementation(project(ProjectRootLibraries.domain))
+    implementation(project(ProjectRootLibraries.support))
     requiredLibraries()
     roomLibraries()
     supportLibraries()
