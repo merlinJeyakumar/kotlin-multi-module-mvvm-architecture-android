@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.asLiveData
-import com.nativedevps.domain.model.example_list.ExampleApiModelItem
+import com.domain.model.example_list.ExampleApiModelItem
 import com.nativedevps.arch.R
 import com.nativedevps.arch.databinding.ActivityExampleListBinding
 import com.nativedevps.arch.main.ui.example_list.adapter.ExampleAdapter

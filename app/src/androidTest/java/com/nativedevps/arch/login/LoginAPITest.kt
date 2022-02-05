@@ -1,7 +1,7 @@
 package com.nativedevps.arch.login
 
 import android.util.Log
-import com.nativedevps.domain.datasources.remote.api.RestDataSource
+import com.domain.datasources.remote.api.RestDataSource
 import com.nativedevps.domain.model.login.LoginSendModel
 import kotlinx.coroutines.runBlocking
 import org.junit.Test

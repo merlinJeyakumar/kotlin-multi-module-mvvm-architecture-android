@@ -3,7 +3,7 @@ package com.nativedevps.arch.main.ui.splash
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.nativedevps.data.repositories.local.configuration.PreferencesRepository
+import com.data.repositories.local.configuration.PreferencesRepository
 import com.nativedevps.arch.R
 import com.nativedevps.arch.databinding.ActivitySplashBinding
 import com.nativedevps.arch.main.ui.main.MainActivity

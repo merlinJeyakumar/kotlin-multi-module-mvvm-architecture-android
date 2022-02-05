@@ -7,7 +7,7 @@
 
         <variable
             name="userProfile"
-            type="com.nativedevps.domain.model.configuration.UserProfile" />
+            type="com.domain.model.configuration.UserProfile" />
     </data>
 
     <ScrollView

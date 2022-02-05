@@ -3,7 +3,7 @@ package com.nativedevps.arch.main.ui.example_list.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.nativedevps.domain.model.example_list.ExampleApiModelItem
+import com.domain.model.example_list.ExampleApiModelItem
 import com.nativedevps.arch.databinding.ItemExampleListBinding
 import com.nativedevps.support.base_class.BaseAdapter2
 import com.nativedevps.support.base_class.BaseViewHolder

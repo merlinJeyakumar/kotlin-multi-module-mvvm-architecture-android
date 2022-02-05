@@ -1,10 +1,10 @@
 package com.nativedevps.arch.main.ui.example_list
 
 import android.app.Application
-import com.nativedevps.domain.datasources.local.SettingsConfigurationSource
-import com.nativedevps.domain.datasources.remote.api.RestDataSource
-import com.nativedevps.domain.model.configuration.UserProfile
-import com.nativedevps.domain.model.example_list.ExampleApiModel
+import com.domain.datasources.local.SettingsConfigurationSource
+import com.domain.datasources.remote.api.RestDataSource
+import com.domain.model.configuration.UserProfile
+import com.domain.model.example_list.ExampleApiModel
 import com.nativedevps.support.base_class.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow

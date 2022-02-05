@@ -7,7 +7,7 @@
 
         <variable
             name="model"
-            type="com.nativedevps.domain.model.example_list.ExampleApiModelItem" />
+            type="com.domain.model.example_list.ExampleApiModelItem" />
     </data>
 
     <FrameLayout
