@@ -2,7 +2,6 @@ package com.nativedevps.arch.login
 
 import android.util.Log
 import com.domain.datasources.remote.api.RestDataSource
-import com.nativedevps.domain.model.login.LoginSendModel
 import kotlinx.coroutines.runBlocking
 import org.junit.Test
 import javax.inject.Inject
@@ -18,7 +17,7 @@ class LoginAPITest {
 
     @Test
     fun testCheckSessionExpiry() = runBlocking {
-        val result = restDataSource.login(LoginSendModel("9042886538")).execute()
-        Log.e("JK", result.message())
+//        val result = restDataSource.login(LoginSendModel("9042886538")).execute()
+//        Log.e("JK", result.message())
     }
 }
