@@ -99,9 +99,7 @@ fun DependencyHandler.testLibraries() {
     implementation(TestLibraries.junitTest)
 }
 
-
 fun DependencyHandler.firebaseLibraries(){
-    implementation(FirebaseLibraries.firebase_database)
     implementation(FirebaseLibraries.firebase_dynamic_links)
     implementation(FirebaseLibraries.firebase_referral)
     implementation(FirebaseLibraries.firebase_authentication)
@@ -110,6 +108,10 @@ fun DependencyHandler.firebaseLibraries(){
     implementation(FirebaseLibraries.firebase_analytics)
     implementation(FirebaseLibraries.firebase_core)
     implementation(FirebaseLibraries.firebase_messaging)
+}
+
+fun DependencyHandler.firebaseExternalLibraries(){
+    implementation(FirebaseLibraries.firebase_database)
 }
 
 fun DependencyHandler.thirdPartyLibraries(){
