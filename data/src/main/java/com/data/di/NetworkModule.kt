@@ -2,7 +2,7 @@ package com.data.di
 
 import com.google.gson.GsonBuilder
 import com.data.repositories.remote.api.RestRepository
-import com.data.repositories.remote.firebase.FirebaseAuthenticationRepository
+import com.data.repositories.remote.firebase.authentication.FirebaseAuthenticationRepository
 import com.data.utility.Constant
 import com.domain.datasources.remote.api.RestDataSource
 import com.domain.datasources.remote.api.RestService

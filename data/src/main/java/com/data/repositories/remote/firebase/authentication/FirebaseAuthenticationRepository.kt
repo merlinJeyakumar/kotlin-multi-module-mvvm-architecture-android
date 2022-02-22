@@ -1,4 +1,4 @@
-package com.data.repositories.remote.firebase
+package com.data.repositories.remote.firebase.authentication
 
 import android.app.Activity
 import android.util.Log
