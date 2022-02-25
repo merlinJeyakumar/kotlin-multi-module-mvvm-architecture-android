@@ -33,4 +33,12 @@ dependencies {
     networkLibraries()
     firebaseLibraries()
     dataStoreLibraries()
+    implementation(GoogleMiscLibraries.playservices_auth)
+    implementation(GoogleMiscLibraries.google_sheets){
+        exclude("org.apache.httpcomponents")
+    }
+    implementation(GoogleMiscLibraries.google_oauth_jetty)
+    implementation(GoogleMiscLibraries.google_api_client) {
+        exclude("org.apache.httpcomponents")
+    }
 }

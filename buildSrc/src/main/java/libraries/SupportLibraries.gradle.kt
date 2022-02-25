@@ -160,3 +160,10 @@ object ThirdPartyLibraries {
     const val subsampling_scale_image_view = "com.davemorrissey.labs:subsampling-scale-image-view-androidx:${Versions.subsampling_scale_image_view}"
     const val otpview_pinview ="com.github.mukeshsolanki:android-otpview-pinview:2.1.2"
 }
+
+object GoogleMiscLibraries {
+    const val playservices_auth = "com.google.android.gms:play-services-auth:20.1.0" //https://developers.google.com/android/guides/setup
+    const val google_sheets = "com.google.apis:google-api-services-sheets:v4-rev612-1.25.0"//exclude: org.apache.httpcomponents //https://mvnrepository.com/artifact/com.google.apis/google-api-services-sheets/v4-rev612-1.25.0
+    const val google_oauth_jetty= "com.google.oauth-client:google-oauth-client-jetty:1.33.1" ////https://mvnrepository.com/artifact/com.google.oauth-client/google-oauth-client-jetty/1.33.1
+    const val google_api_client= "com.google.api-client:google-api-client-android:1.33.2" //exclude: org.apache.httpcomponents https://mvnrepository.com/artifact/com.google.api-client/google-api-client-android/1.33.2
+}
