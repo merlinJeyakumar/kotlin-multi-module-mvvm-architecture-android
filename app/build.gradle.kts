@@ -9,9 +9,9 @@ plugins {
 }
 
 android {
-    setCompileSdkVersion(property("compileSdkVersion") as Int)
+    setCompileSdkVersion(Configs.compileSdkVersion)
     defaultConfig {
-        applicationId = "com.nativedevps.mlm"
+        applicationId = Configs.applicationId
         versionCode = Configs.versionCode
         versionName = Configs.versionName
         setMinSdkVersion(property("minSdkVersion") as Int)
@@ -71,10 +71,10 @@ android {
 
     productFlavors {
         create("production") {
-            applicationId = "com.nativedevps.arch"
+            applicationId = Configs.applicationId
         }
         create("development") {
-            applicationId = "com.nativedevps.arch.development"
+            applicationId = "${Configs.applicationId}.development"
         }
     }
 }
