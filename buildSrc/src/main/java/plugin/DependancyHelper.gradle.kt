@@ -29,6 +29,7 @@ fun DependencyHandler.supportLibraries() {
     implementation(SupportLibraries.support_design)
     implementation(SupportLibraries.constraintLayout)
     implementation(SupportLibraries.sdp_android)
+    implementation(SupportLibraries.ssp_android)
     implementation(SupportLibraries.material)
     implementation(SupportLibraries.recyclerview)
     implementation(SupportLibraries.card_view)

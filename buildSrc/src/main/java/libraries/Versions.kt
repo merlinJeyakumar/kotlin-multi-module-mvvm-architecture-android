@@ -32,6 +32,7 @@ const val appCompatVersion = "1.4.1" //todo: https://androidx.tech/artifacts/app
     const val materialVersion = "1.5.0" //todo: https://github.com/material-components/material-components-android/releases
     const val support_design = "28.0.0"
     const val sdp_android = "1.0.6"
+    const val ssp_android = "1.0.0"
     const val recyclerView = "1.3.0-alpha01" //todo: https://androidx.tech/artifacts/recyclerview/recyclerview/
     const val card_view = "1.0.0"
     const val material_design = "1.1.0-beta02" //todo: https://github.com/material-components/material-components-android/releases

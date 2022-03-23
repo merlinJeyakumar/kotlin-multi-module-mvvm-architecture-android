@@ -56,6 +56,7 @@ object SupportLibraries {
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
     const val sdp_android = "com.intuit.sdp:sdp-android:${Versions.sdp_android}"
+    const val ssp_android = "com.intuit.ssp:ssp-android:${Versions.ssp_android}"
     const val material = "com.google.android.material:material:${Versions.materialVersion}"
     const val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
     const val card_view = "androidx.cardview:cardview:${Versions.card_view}"
