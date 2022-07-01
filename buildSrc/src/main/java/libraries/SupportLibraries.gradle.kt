@@ -1,8 +1,7 @@
 import libraries.Versions
 
 object ProjectRootLibraries {
-    const val classpathGradle =
-        "com.android.tools.build:gradle:${Configs.classpathGradleVersion}"
+    const val classpathGradle = "com.android.tools.build:gradle:${Configs.classpathGradleVersion}"
     const val classpathKotlinGradle =
         "org.jetbrains.kotlin:kotlin-gradle-plugin:${Configs.kotlinVersion}"
     const val classpathDaggerHiltVersion =
@@ -39,8 +38,6 @@ object RequiredLibraries {
     const val viewmodel_ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewmodel_ktx}"
     const val livedata_ktx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.livedata_ktx}"
     const val hilt_android = "com.google.dagger:hilt-android:${Versions.hilt_android}"
-    const val hilt_lifecycle_viewmodel =
-        "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hilt_lifecycle_viewmodel}"
     const val kapt_hilt_android_compiler =
         "com.google.dagger:hilt-android-compiler:${Versions.hilt_android_compiler}"
     const val kapt_hilt_compiler = "androidx.hilt:hilt-compiler:${Versions.hilt_compiler}"
@@ -60,7 +57,6 @@ object SupportLibraries {
     const val material = "com.google.android.material:material:${Versions.materialVersion}"
     const val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
     const val card_view = "androidx.cardview:cardview:${Versions.card_view}"
-    const val material_design = "com.google.android.material:material:${Versions.material_design}"
     const val legacy_support = "androidx.legacy:legacy-support-v4:${Versions.legacy_support}"
     const val paging_runtime = "androidx.paging:paging-runtime:${Versions.paging_runtime}"
     const val paging_rxjava = "androidx.paging:paging-rxjava3:${Versions.paging_rxjava3}"
@@ -153,18 +149,37 @@ object TestLibraries {
     const val junit = "junit:junit:${Versions.junitVersion}"
     const val junitTest = "androidx.test.ext:junit:${Versions.junitTestVersion}"
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCoreVersion}"
+
+    const val androidTestImplementationRobolectric =
+        "org.robolectric:robolectric:4.4" //androidTestImplementation
+    const val testImplementationHiltAndroidTesting =
+        "com.google.dagger:hilt-android-testing:${Versions.hiltAndroidTesting}" //testImplementation
+    const val androidTestImplementationHiltAndroidTesting =
+        "com.google.dagger:hilt-android-testing:${Versions.hiltAndroidTesting}" //androidTestImplementation
+    const val testAnnotationProcessorHiltAndroidTesting =
+        "com.google.dagger:hilt-android-compiler:${Versions.hiltAndroidCompiler}" //testAnnotationProcessor
+    const val kaptAndroidTest =
+        "com.google.dagger:hilt-android-compiler:${Versions.hiltAndroidCompiler}" //kaptAndroidTest
+    const val androidTestAnnotationProcessor =
+        "com.google.dagger:hilt-android-compiler:${Versions.hiltAndroidCompiler}" //androidTestAnnotationProcessor
 }
 
 object ThirdPartyLibraries {
     const val jsoup = "org.jsoup:jsoup:${Versions.jsoup}" //html-parser
     const val auto_starter = "com.github.judemanutd:autostarter:${Versions.auto_starter}"
-    const val subsampling_scale_image_view = "com.davemorrissey.labs:subsampling-scale-image-view-androidx:${Versions.subsampling_scale_image_view}"
-    const val otpview_pinview ="com.github.mukeshsolanki:android-otpview-pinview:2.1.2"
+    const val subsampling_scale_image_view =
+        "com.davemorrissey.labs:subsampling-scale-image-view-androidx:${Versions.subsampling_scale_image_view}"
+    const val otpview_pinview = "com.github.mukeshsolanki:android-otpview-pinview:2.1.2"
+    const val indicator = "com.tbuonomo:dotsindicator:4.2"
 }
 
 object GoogleMiscLibraries {
-    const val playservices_auth = "com.google.android.gms:play-services-auth:20.1.0" //https://developers.google.com/android/guides/setup
-    const val google_sheets = "com.google.apis:google-api-services-sheets:v4-rev612-1.25.0"//exclude: org.apache.httpcomponents //https://mvnrepository.com/artifact/com.google.apis/google-api-services-sheets/v4-rev612-1.25.0
-    const val google_oauth_jetty= "com.google.oauth-client:google-oauth-client-jetty:1.33.1" ////https://mvnrepository.com/artifact/com.google.oauth-client/google-oauth-client-jetty/1.33.1
-    const val google_api_client= "com.google.api-client:google-api-client-android:1.33.2" //exclude: org.apache.httpcomponents https://mvnrepository.com/artifact/com.google.api-client/google-api-client-android/1.33.2
+    const val playservices_auth =
+        "com.google.android.gms:play-services-auth:19.0.0" //https://developers.google.com/android/guides/setup
+    const val google_sheets =
+        "com.google.apis:google-api-services-sheets:v4-rev612-1.25.0"//exclude: org.apache.httpcomponents //https://mvnrepository.com/artifact/com.google.apis/google-api-services-sheets/v4-rev612-1.25.0
+    const val google_oauth_jetty =
+        "com.google.oauth-client:google-oauth-client-jetty:1.33.1" ////https://mvnrepository.com/artifact/com.google.oauth-client/google-oauth-client-jetty/1.33.1
+    const val google_api_client =
+        "com.google.api-client:google-api-client-android:1.33.2" //exclude: org.apache.httpcomponents https://mvnrepository.com/artifact/com.google.api-client/google-api-client-android/1.33.2
 }

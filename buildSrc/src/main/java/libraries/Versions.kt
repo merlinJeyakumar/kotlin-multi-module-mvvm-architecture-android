@@ -3,39 +3,37 @@ package libraries
 object Versions {
 
     // Required Core Libraries
-const val appCompatVersion = "1.4.1" //todo: https://androidx.tech/artifacts/appcompat/appcompat/
-    const val core_ktx = "1.7.0" //todo: https://androidx.tech/artifacts/core/core-ktx/
+const val appCompatVersion = "1.6.0-alpha05" //todo: https://androidx.tech/artifacts/appcompat/appcompat/
+    const val core_ktx = "1.9.0-alpha05" //todo: https://androidx.tech/artifacts/core/core-ktx/
     const val multi_dex = "2.0.1"
-    const val lifecycle_extension = "2.2.0"
-    const val coroutines_android = "1.6.0" //https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-android
-    const val coroutines_core = "1.6.0" //https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-core
-    const val coroutines_test = "1.6.0" //https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-test
-    const val coroutines_play_services = "1.6.0" //https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-play-services
+    const val lifecycle_extension = "2.2.0" //https://androidx.tech/artifacts/lifecycle/lifecycle-extensions/
+    const val coroutines_android = "1.6.2" //https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-android
+    const val coroutines_core = "1.6.2" //https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-core
+    const val coroutines_test = "1.6.2" //https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-test
+    const val coroutines_play_services = "1.6.2" //https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-play-services
     const val anko = "0.10.4" //https://mvnrepository.com/artifact/org.jetbrains.anko/anko?repo=springio-plugins-release
     const val anko_commons = "0.10.4" //https://mvnrepository.com/artifact/org.jetbrains.anko/anko-common?repo=springio-plugins-release
-    const val activity_ktx = "1.3.1"
-    const val fragment_ktx = "1.3.1"
-    const val view_binding = "7.0.1"
-    const val runtime_ktx = "2.2.0"
-    const val viewmodel_ktx = "2.2.0"
-    const val livedata_ktx = "2.2.0"
-    const val hilt_android = "2.41"
-    const val hilt_android_compiler = "2.41"
+    const val activity_ktx = "1.4.0" //https://developer.android.com/jetpack/androidx/releases/activity
+    const val fragment_ktx = "1.5.0-rc01" //https://developer.android.com/jetpack/androidx/releases/fragment
+    const val view_binding = "7.3.0-beta03" //https://mvnrepository.com/artifact/com.android.databinding/viewbinding?repo=google
+    const val runtime_ktx = "2.4.1" //https://developer.android.com/jetpack/androidx/releases/lifecycle
+    const val viewmodel_ktx = "2.4.1" //https://developer.android.com/jetpack/androidx/releases/lifecycle
+    const val livedata_ktx = "2.4.1" //https://developer.android.com/jetpack/androidx/releases/lifecycle
+    const val hilt_android = "2.42"
+    const val hilt_android_compiler = "2.42"
     const val hilt_compiler = "1.0.0"
-    const val hilt_lifecycle_viewmodel = "1.0.0-alpha03" //todo: https://androidx.tech/artifacts/hilt/hilt-lifecycle-viewmodel/
     const val databinding_runtime = "7.0.1"
     const val gson = "2.8.5"
     const val timber = "4.5.1"
 
     // Support Libraries
-    const val constraintLayoutVersion = "2.0.4"
-    const val materialVersion = "1.5.0" //todo: https://github.com/material-components/material-components-android/releases
+    const val constraintLayoutVersion = "2.0.4" //https://mvnrepository.com/artifact/com.android.support.constraint/constraint-layout?repo=google
+    const val materialVersion = "1.6.1" //todo: https://github.com/material-components/material-components-android/releases
     const val support_design = "28.0.0"
     const val sdp_android = "1.0.6"
-    const val ssp_android = "1.0.0"
-    const val recyclerView = "1.3.0-alpha01" //todo: https://androidx.tech/artifacts/recyclerview/recyclerview/
+    const val ssp_android = "1.0.6"
+    const val recyclerView = "1.3.0-alpha02" //todo: https://androidx.tech/artifacts/recyclerview/recyclerview/
     const val card_view = "1.0.0"
-    const val material_design = "1.1.0-beta02" //todo: https://github.com/material-components/material-components-android/releases
     const val legacy_support = "1.0.0"
     const val paging_runtime = "3.1.0" //https://androidx.tech/artifacts/paging/paging-runtime/
     const val paging_rxjava3 = "3.0.1"
@@ -101,9 +99,11 @@ const val appCompatVersion = "1.4.1" //todo: https://androidx.tech/artifacts/app
     const val junitVersion = "4.13.2"
     const val junitTestVersion = "1.1.3"
     const val espressoCoreVersion = "3.4.0"
+    const val hiltAndroidTesting = "2.38.1"
+    const val hiltAndroidCompiler = "2.41"
 
     // DataStore
-    const val protobuf = "3.14.0"
-    const val protobuf_plugin = "0.8.12"
+    const val protobuf = "3.19.4"
+    const val protobuf_plugin = "0.8.18"
     const val data_store = "1.0.0"
 }

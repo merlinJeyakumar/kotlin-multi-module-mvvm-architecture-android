@@ -98,8 +98,8 @@ android {
 
     sonarqube {
         properties {
-            property("sonar.projectName", "oneself-droid")
-            property("sonar.projectKey", "oneself-droid")
+            property("sonar.projectName", "peace-android")
+            property("sonar.projectKey", "peace-android")
             property("sonar.sourceEncoding", "UTF-8")
             property("sonar.sources", "src/main/java")
             property(
