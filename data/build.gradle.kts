@@ -12,14 +12,36 @@ android {
         setMinSdkVersion(Configs.minSdkVersion)
         setTargetSdkVersion(Configs.targetSdkVersion.toString())
         buildConfigField("int", "DB_VERSION", "1")
-        buildConfigField("String", "REST_URL", "\"https://jsonkeeper.com/\"")
-        buildConfigField("String", "API_KEY", "\"space_to_key\"")
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true
     }
     buildFeatures {
         viewBinding = true
         dataBinding = true
+    }
+    flavorDimensions += listOf("development")
+    productFlavors {
+        create("development") {
+            buildConfigField(
+                "String",
+                "REST_URL",
+                "\"https://yourapispace.com/api/\""
+            )
+        }
+        create("beta") {
+            buildConfigField(
+                "String",
+                "REST_URL",
+                "\"https://yourapispace.com/api/\""
+            )
+        }
+        create("production") {
+            buildConfigField(
+                "String",
+                "REST_URL",
+                "\"https://yourapispace.com/api/\""
+            )
+        }
     }
 }
 
