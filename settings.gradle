@@ -1,5 +1,0 @@
-rootProject.name = 'Peace'
-include ':app', ':support', ':data', ':domain'
-project(':support').projectDir = new File(rootDir, 'modules/jeyksupport')
-project(':data').projectDir = new File(rootDir, 'data')
-project(':domain').projectDir = new File(rootDir, 'domain')
