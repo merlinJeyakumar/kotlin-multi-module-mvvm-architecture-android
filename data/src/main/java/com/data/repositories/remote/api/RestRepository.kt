@@ -22,7 +22,7 @@ class RestRepository @Inject constructor(private val apiRestService: ApiRestServ
         return apiRestService.update() //no parameter required for this api.
     }
 
-    override suspend fun getCharacterList(): ResponseCharacterList? {
+    override suspend fun getCharacterList(): Result<ResponseCharacterList> {
         return apiRestService.getCharacterList()
     }
 

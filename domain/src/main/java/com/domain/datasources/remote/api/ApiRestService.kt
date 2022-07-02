@@ -15,7 +15,7 @@ interface ApiRestService {
     suspend fun update(): UpdateProfileModel?
 
     @GET("http://hp-api.herokuapp.com/api/characters") //dynamic url
-    suspend fun getCharacterList(): ResponseCharacterList?
+    suspend fun getCharacterList(): Result<ResponseCharacterList>
 
     @POST("fooPost")
     suspend fun fooPost(

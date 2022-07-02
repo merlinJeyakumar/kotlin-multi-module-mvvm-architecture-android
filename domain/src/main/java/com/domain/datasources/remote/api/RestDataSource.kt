@@ -12,7 +12,7 @@ import com.domain.model.update_profile.UpdateSendModel
 
 interface RestDataSource {
     suspend fun updateProfile(updateSendModel: UpdateSendModel): UpdateProfileModel?
-    suspend fun getCharacterList(): ResponseCharacterList?
+    suspend fun getCharacterList(): Result<ResponseCharacterList>
     suspend fun fooPost(foo:String, requestFooPost: RequestFooPost): Result<ResponseFooPost>
     suspend fun fooGet(
         authorization: String,

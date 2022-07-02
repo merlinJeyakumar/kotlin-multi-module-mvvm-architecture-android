@@ -20,7 +20,7 @@ import org.jetbrains.anko.toast
 class ExampleListActivity : ActionBarActivity<ActivityExampleListBinding, ExampleListViewModel>(
     R.layout.activity_example_list,
     ExampleListViewModel::class.java
-), ExampleAdapter.ItemListener {
+) {
 
     private var alertDialog: AlertDialog? = null
     private lateinit var exampleAdapter: ExampleAdapter
@@ -29,26 +29,27 @@ class ExampleListActivity : ActionBarActivity<ActivityExampleListBinding, Exampl
         super.onInit(savedInstanceState)
 
         initData()
-        initFetching()
+        initObserver()
         initListener()
         initPreview()
     }
 
     private fun initData() {
-        viewModel.retrieveExampleList { success, model, error ->
-            if (success) {
-                if (! ::exampleAdapter.isInitialized) {
-                    exampleAdapter = ExampleAdapter(this)
-                    childBinding.bankRecyclerView.adapter = exampleAdapter
-                }
-                exampleAdapter.submitList(model)
-            } else {
+        viewModel.retrieveExampleList { success, error ->
+            if (! success) {
                 toast("failed $error")
             }
         }
     }
 
-    private fun initFetching() {
+    private fun initObserver() {
+        viewModel.characterListLiveData.observe(this) {
+            if (! ::exampleAdapter.isInitialized) {
+                exampleAdapter = ExampleAdapter(itemListener)
+                childBinding.bankRecyclerView.adapter = exampleAdapter
+            }
+            exampleAdapter.submitList(it)
+        }
     }
 
     private fun initListener() {
@@ -64,26 +65,6 @@ class ExampleListActivity : ActionBarActivity<ActivityExampleListBinding, Exampl
         return super.onSupportNavigateUp()
     }
 
-    override fun onItemSelected(position: Int, item: ResponseCharacterList.ExampleApiModelItem) {
-        if (alertDialog != null && alertDialog?.isShowing !!) { //todo: ensure already alert dialog open
-            return
-        }
-        alertDialog =
-            listDialog(title = null, stringList = listOf(
-                Pair(
-                    R.drawable.ic_baseline_delete_24,
-                    "delete"
-                )
-            ), callback = { success, posText ->
-                alertDialog = null
-                if (success) {
-                    alertDialog = confirmationDialog(callback = { success ->
-                        //todo: optional usage
-                    })
-                }
-            })
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         alertDialog?.dismiss()
@@ -91,6 +72,31 @@ class ExampleListActivity : ActionBarActivity<ActivityExampleListBinding, Exampl
 
     override fun getLocale(context: Context): String? {
         return SplashActivity.language
+    }
+
+    private val itemListener = object : ExampleAdapter.ItemListener {
+        override fun onItemSelected(
+            position: Int,
+            item: ResponseCharacterList.ExampleApiModelItem
+        ) {
+            if (alertDialog?.isShowing == true) { //todo: ensure already alert dialog open
+                return
+            }
+            alertDialog =
+                listDialog(title = null, stringList = listOf(
+                    Pair(
+                        R.drawable.ic_baseline_delete_24,
+                        "delete"
+                    )
+                ), callback = { success, posText ->
+                    alertDialog = null
+                    if (success) {
+                        alertDialog = confirmationDialog(callback = { success ->
+                            //todo: optional usage
+                        })
+                    }
+                })
+        }
     }
 
     companion object {
