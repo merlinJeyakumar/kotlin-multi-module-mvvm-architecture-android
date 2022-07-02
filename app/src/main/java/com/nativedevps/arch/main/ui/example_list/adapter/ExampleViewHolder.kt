@@ -2,7 +2,7 @@ package com.nativedevps.arch.main.ui.example_list.adapter
 
 import com.bumptech.glide.Glide
 import com.bumptech.glide.signature.ObjectKey
-import com.domain.model.example_list.ExampleApiModelItem
+import com.domain.model.example_list.ResponseCharacterList.ExampleApiModelItem
 import com.nativedevps.arch.R
 import com.nativedevps.arch.databinding.ItemExampleListBinding
 import com.nativedevps.support.base_class.BaseViewHolder

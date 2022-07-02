@@ -4,9 +4,11 @@ import android.app.Application
 import com.domain.datasources.local.IDataStoreDataSource
 import com.domain.datasources.remote.api.RestDataSource
 import com.domain.model.configuration.UserProfile
-import com.domain.model.example_list.ExampleApiModel
+import com.domain.model.example_list.ResponseCharacterList
 import com.nativedevps.support.base_class.BaseViewModel
+import com.nativedevps.support.utility.threading.runOnAsyncThread
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
@@ -18,35 +20,25 @@ class ExampleListViewModel @Inject constructor(application: Application) :
     lateinit var restDataSource: RestDataSource
 
     @Inject
-    lateinit var IDataStoreDataSource: IDataStoreDataSource
+    lateinit var dataStoreDataSource: IDataStoreDataSource
 
-    val userProfile: Flow<UserProfile> get() = IDataStoreDataSource.getUserPreference()
+    val userProfile: Flow<UserProfile> get() = dataStoreDataSource.getUserPreference()
 
     override fun onCreate() {
     }
 
     fun retrieveExampleList(
-        callback: (boolean: Boolean, ExampleApiModel?, error: String?) -> Unit, //todo: replace with specific type
+        callback: (
+            boolean: Boolean,
+            ResponseCharacterList?,
+            error: String?
+        ) -> Unit
     ) {
-        runOnNewThread {
-            showProgressDialog("Loading..")
-            try {
-                val exampleList = restDataSource.getExampleList()
-                runOnUiThread {
-                    if (!exampleList.isNullOrEmpty()) {
-                        hideProgressDialog()
-                        callback(true, exampleList, null) //todo
-                    } else {
-                        throw IllegalStateException("invalid result")
-                    }
-                }
-            } catch (e: Exception) {
-                e.printStackTrace()
-                runOnUiThread {
-                    hideProgressDialog()
-                    callback(false, null, "retrieving failed ${e.localizedMessage}")
-                }
-            }
+        currentJob = runOnAsyncThread() {
+
         }
     }
+
+
+    private var currentJob: Job? = null
 }

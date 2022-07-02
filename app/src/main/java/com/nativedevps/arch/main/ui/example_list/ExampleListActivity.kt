@@ -1,10 +1,11 @@
 package com.nativedevps.arch.main.ui.example_list
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
-import androidx.lifecycle.asLiveData
-import com.domain.model.example_list.ExampleApiModelItem
+import com.domain.model.example_list.ResponseCharacterList
 import com.nativedevps.arch.R
 import com.nativedevps.arch.databinding.ActivityExampleListBinding
 import com.nativedevps.arch.main.ui.example_list.adapter.ExampleAdapter
@@ -34,12 +35,9 @@ class ExampleListActivity : ActionBarActivity<ActivityExampleListBinding, Exampl
     }
 
     private fun initData() {
-        viewModel.userProfile.asLiveData().observe(this, { userProfile ->
-            //todo: attach user data to ui
-        })
         viewModel.retrieveExampleList { success, model, error ->
             if (success) {
-                if (!::exampleAdapter.isInitialized) {
+                if (! ::exampleAdapter.isInitialized) {
                     exampleAdapter = ExampleAdapter(this)
                     childBinding.bankRecyclerView.adapter = exampleAdapter
                 }
@@ -66,14 +64,16 @@ class ExampleListActivity : ActionBarActivity<ActivityExampleListBinding, Exampl
         return super.onSupportNavigateUp()
     }
 
-    override fun onItemSelected(position: Int, item: ExampleApiModelItem) {
-        if (alertDialog != null && alertDialog?.isShowing!!) { //todo: ensure already alert dialog open
+    override fun onItemSelected(position: Int, item: ResponseCharacterList.ExampleApiModelItem) {
+        if (alertDialog != null && alertDialog?.isShowing !!) { //todo: ensure already alert dialog open
             return
         }
         alertDialog =
             listDialog(title = null, stringList = listOf(
-                Pair(R.drawable.ic_baseline_delete_24,
-                    "delete")
+                Pair(
+                    R.drawable.ic_baseline_delete_24,
+                    "delete"
+                )
             ), callback = { success, posText ->
                 alertDialog = null
                 if (success) {
@@ -91,5 +91,11 @@ class ExampleListActivity : ActionBarActivity<ActivityExampleListBinding, Exampl
 
     override fun getLocale(context: Context): String? {
         return SplashActivity.language
+    }
+
+    companion object {
+        fun getIntent(activity: Activity): Intent {
+            return Intent(activity, ExampleListActivity::class.java)
+        }
     }
 }

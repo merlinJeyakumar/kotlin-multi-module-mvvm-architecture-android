@@ -1,7 +1,7 @@
 package com.nativedevps.arch.login
 
 import com.domain.datasources.remote.api.RestDataSource
-import com.domain.model.example_list.ExampleApiModel
+import com.domain.model.example_list.ResponseCharacterList
 import com.nativedevps.support.utility.debugging.JLogE
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
@@ -31,7 +31,7 @@ class HiltLoginAPITest {
 
     @Test
     fun testCheckSessionExpiry() = runBlocking {
-        val result: ExampleApiModel? = restDataSource.getExampleList()
+        val result: ResponseCharacterList? = restDataSource.getCharacterList()
         JLogE("LoginAPITest", "result: $result")
     }
 }

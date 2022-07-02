@@ -19,42 +19,10 @@ class MainViewModel @Inject constructor(application: Application) : BaseViewMode
     lateinit var restDataSource: RestDataSource
 
     @Inject
-    lateinit var IDataStoreDataSource: IDataStoreDataSource
+    lateinit var dataStoreDataSource: IDataStoreDataSource
 
-    val userProfile: Flow<UserProfile> get() = IDataStoreDataSource.getUserPreference()
+    val userProfile: Flow<UserProfile> get() = dataStoreDataSource.getUserPreference()
 
     override fun onCreate() {
     }
-
-    fun retrieveUserProfile(
-        callback: (boolean: Boolean, UserModel?, error: String?) -> Unit, //todo: replace with specific type
-    ) {
-        runOnNewThread {
-            showProgressDialog("Loading..")
-            try {
-                val profileModel = restDataSource.updateProfile(UpdateSendModel(1,
-                    "Jeyakumar",
-                    "s.merlinjeyakumar@gmail.com",
-                    "S"))
-                if (profileModel != null) {
-                    IDataStoreDataSource.updateUserPreference(profileModel.result.toProfile())
-                }
-                runOnUiThread {
-                    if (profileModel?.result != null) {
-                        hideProgressDialog()
-                        callback(true, profileModel.result, null) //todo
-                    } else {
-                        throw IllegalStateException("invalid result")
-                    }
-                }
-            } catch (e: Exception) {
-                e.printStackTrace()
-                runOnUiThread {
-                    hideProgressDialog()
-                    callback(false, null, "retrieving failed ${e.localizedMessage}")
-                }
-            }
-        }
-    }
-
 }

@@ -2,7 +2,7 @@ package com.data.repositories.remote.api
 
 import com.domain.datasources.remote.api.ApiRestService
 import com.domain.datasources.remote.api.RestDataSource
-import com.domain.model.example_list.ExampleApiModel
+import com.domain.model.example_list.ResponseCharacterList
 import com.domain.model.foo_get.RequestFooGet
 import com.domain.model.foo_get.ResponseFooGet
 import com.domain.model.foo_patch.RequestFooPatch
@@ -22,8 +22,8 @@ class RestRepository @Inject constructor(private val apiRestService: ApiRestServ
         return apiRestService.update() //no parameter required for this api.
     }
 
-    override suspend fun getExampleList(): ExampleApiModel? {
-        return apiRestService.getExampleList()
+    override suspend fun getCharacterList(): ResponseCharacterList? {
+        return apiRestService.getCharacterList()
     }
 
     override suspend fun fooPost(
