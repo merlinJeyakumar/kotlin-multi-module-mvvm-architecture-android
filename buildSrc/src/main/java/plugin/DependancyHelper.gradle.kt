@@ -41,6 +41,7 @@ fun DependencyHandler.supportLibraries() {
     implementation(SupportLibraries.shimmer)
     implementation(SupportLibraries.libphonenumber)
     implementation(SupportLibraries.work_runtime_ktx)
+    implementation(SupportLibraries.event_bus)
 }
 
 fun DependencyHandler.imageLoaderLibraries() {
@@ -138,4 +139,9 @@ fun DependencyHandler.composeLibraries() {
     implementation("androidx.compose.material:material-icons-extended:1.1.1")
     // Integration with observables
     implementation("androidx.compose.runtime:runtime-livedata:1.1.1")
+}
+
+fun DependencyHandler.googlePlayLibraries(){
+    implementation(GoogleMiscLibraries.google_api_client)
+    implementation(GoogleMiscLibraries.playservices_auth)
 }

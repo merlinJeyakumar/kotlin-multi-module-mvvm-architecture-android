@@ -2,7 +2,7 @@ package com.nativedevps.arch.main.ui.splash
 
 import android.app.Application
 import android.util.Log
-import com.domain.datasources.local.SettingsConfigurationSource
+import com.domain.datasources.local.IDataStoreDataSource
 import com.domain.datasources.remote.firebase.FirebaseAuthenticationService
 import com.domain.model.configuration.AppConfiguration
 import com.domain.model.configuration.UserProfile
@@ -19,17 +19,17 @@ class SplashViewModel @Inject constructor(application: Application) : BaseViewMo
     lateinit var firebaseAuthenticationService: FirebaseAuthenticationService
 
     @Inject
-    lateinit var settingsConfigurationSource: SettingsConfigurationSource
+    lateinit var IDataStoreDataSource: IDataStoreDataSource
 
-    val userProfile: Flow<UserProfile> get() = settingsConfigurationSource.getUserPreference()
-    val appConfiguration: Flow<AppConfiguration> get() = settingsConfigurationSource.getAppConfiguration()
+    val userProfile: Flow<UserProfile> get() = IDataStoreDataSource.getUserPreference()
+    val appConfiguration: Flow<AppConfiguration> get() = IDataStoreDataSource.getAppConfiguration()
 
     override fun onCreate() {}
 
     fun isAuthenticated(isAuthenticated: (isAuthenticated: Boolean) -> Unit) {
         runOnNewThread {
             val userPreference: UserProfile? =
-                settingsConfigurationSource.getUserPreference().firstOrNull()
+                IDataStoreDataSource.getUserPreference().firstOrNull()
             Log.e("JK", "userPreference  ${userPreference?.firstName}")
             isAuthenticated(!userPreference?.emailId.isNullOrEmpty() && firebaseAuthenticationService.getAuthenticatedUser() != null)
         }

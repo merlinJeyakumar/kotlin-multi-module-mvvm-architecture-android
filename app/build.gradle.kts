@@ -143,20 +143,8 @@ dependencies {
 
 
     //todo: update on buildSrc
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("com.google.android.gms:play-services-auth:17.0.0")
-    implementation("com.google.android.gms:play-services-auth-api-phone:17.4.0")
-    implementation("androidx.navigation:navigation-fragment:2.3.4")
-    implementation("androidx.navigation:navigation-ui:2.3.4")
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.biometric:biometric:1.1.0")
-    implementation("com.alimuzaffar.lib:pinentryedittext:2.0.6")
-    implementation("androidx.appcompat:appcompat:1.4.1")
-    implementation("com.google.android.material:material:1.6.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
-    implementation("com.github.dhaval2404:imagepicker:2.1")
-    implementation("de.hdodenhof:circleimageview:3.1.0")
-    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.24")
+    implementation(ThirdPartyLibraries.android_gif_drawable)
+    implementation(ThirdPartyLibraries.circle_image_view)
 }
 
 /*todo: jacoco*/

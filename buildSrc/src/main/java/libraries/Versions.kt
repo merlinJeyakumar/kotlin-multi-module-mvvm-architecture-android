@@ -25,9 +25,10 @@ const val appCompatVersion = "1.6.0-alpha05" //todo: https://androidx.tech/artif
     const val databinding_runtime = "7.0.1"
     const val gson = "2.8.5"
     const val timber = "4.5.1"
+    const val event_bus: String = "3.3.1"
 
     // Support Libraries
-    const val constraintLayoutVersion = "2.0.4" //https://mvnrepository.com/artifact/com.android.support.constraint/constraint-layout?repo=google
+    const val constraintLayoutVersion = "2.1.3" //https://mvnrepository.com/artifact/com.android.support.constraint/constraint-layout?repo=google
     const val materialVersion = "1.6.1" //todo: https://github.com/material-components/material-components-android/releases
     const val support_design = "28.0.0"
     const val sdp_android = "1.0.6"
@@ -103,7 +104,7 @@ const val appCompatVersion = "1.6.0-alpha05" //todo: https://androidx.tech/artif
     const val hiltAndroidCompiler = "2.41"
 
     // DataStore
-    const val protobuf = "3.19.4"
-    const val protobuf_plugin = "0.8.18"
-    const val data_store = "1.0.0"
+    const val protobuf = "3.21.2"
+    const val protobuf_plugin = "0.8.19" //https://mvnrepository.com/artifact/com.google.protobuf/protobuf-gradle-plugin
+    const val data_store = "1.0.0" //https://developer.android.com/jetpack/androidx/releases/datastore
 }

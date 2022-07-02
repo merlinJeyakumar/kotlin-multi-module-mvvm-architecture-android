@@ -6,7 +6,7 @@ import com.data.database.data_store.DataStoreManager
 import com.data.repositories.local.configuration.DataStoreRepository
 import com.data.repositories.local.configuration.PreferencesRepository
 import com.domain.datasources.local.IPreferencesDataSource
-import com.domain.datasources.local.SettingsConfigurationSource
+import com.domain.datasources.local.IDataStoreDataSource
 import com.domain.model.configuration.AppConfiguration
 import com.domain.model.configuration.UserProfile
 import dagger.Module
@@ -24,7 +24,7 @@ object ConfigurationModule {
     fun provideSettingsConfigurationRepository(
         userPreferenceDataStore: DataStore<UserProfile>,
         appConfiguration: DataStore<AppConfiguration>,
-    ): SettingsConfigurationSource {
+    ): IDataStoreDataSource {
         return DataStoreRepository(userPreferenceDataStore,
             appConfiguration)
     }

@@ -25,13 +25,13 @@ class MainActivity : ActionBarActivity<ActivityMainsBinding, MainViewModel>(
     }
 
     private fun initData() {
-        viewModel.userProfile.asLiveData().observe(this, { userProfile ->
+        viewModel.userProfile.asLiveData().observe(this) { userProfile ->
             /*if (userProfile.emailId.isNullOrEmpty()) { //todo: optional
                 initFreshLogin()
                 return@observe
             }*/
             childBinding.userProfile = userProfile
-        })
+        }
 
         viewModel.retrieveUserProfile { success, model, error ->
             if (success) {

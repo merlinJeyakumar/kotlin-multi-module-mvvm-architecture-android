@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.data.database.Migration.MIGRATION_v1_2
+import com.data.utility.RoomMigration.MIGRATION_v1_2
 import com.data.database.dao.flickr.SampleItemDao
 import com.domain.entity.flickr.SampleEntity
 import data.BuildConfig

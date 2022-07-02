@@ -69,6 +69,7 @@ object SupportLibraries {
         "com.googlecode.libphonenumber:libphonenumber:${Versions.libPhoneNumber}"
     const val work_runtime_ktx = "androidx.work:work-runtime-ktx:${Versions.work_runtime_ktx}"
     const val work_rxjava3 = "androidx.work:work-rxjava3:${Versions.work_rxjava3}"
+    const val event_bus = "org.greenrobot:eventbus:${Versions.event_bus}"
 }
 
 object RxJavaLibraries {
@@ -171,6 +172,10 @@ object ThirdPartyLibraries {
         "com.davemorrissey.labs:subsampling-scale-image-view-androidx:${Versions.subsampling_scale_image_view}"
     const val otpview_pinview = "com.github.mukeshsolanki:android-otpview-pinview:2.1.2"
     const val indicator = "com.tbuonomo:dotsindicator:4.2"
+    const val otp_pinentry_edittext = "com.alimuzaffar.lib:pinentryedittext:2.0.6"
+    const val image_picker = "com.github.dhaval2404:imagepicker:2.1"
+    const val circle_image_view = "de.hdodenhof:circleimageview:3.1.0"
+    const val android_gif_drawable = "pl.droidsonroids.gif:android-gif-drawable:1.2.24"
 }
 
 object GoogleMiscLibraries {

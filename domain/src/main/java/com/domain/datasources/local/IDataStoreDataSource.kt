@@ -4,7 +4,7 @@ import com.domain.model.configuration.*
 import kotlinx.coroutines.flow.Flow
 
 
-interface SettingsConfigurationSource {
+interface IDataStoreDataSource {
     fun getUserPreference(): Flow<UserProfile>
     suspend fun updateUserPreference(
         userProfile: UserProfile,

@@ -1,7 +1,7 @@
 package com.nativedevps.arch.main.ui.example_list
 
 import android.app.Application
-import com.domain.datasources.local.SettingsConfigurationSource
+import com.domain.datasources.local.IDataStoreDataSource
 import com.domain.datasources.remote.api.RestDataSource
 import com.domain.model.configuration.UserProfile
 import com.domain.model.example_list.ExampleApiModel
@@ -18,9 +18,9 @@ class ExampleListViewModel @Inject constructor(application: Application) :
     lateinit var restDataSource: RestDataSource
 
     @Inject
-    lateinit var settingsConfigurationSource: SettingsConfigurationSource
+    lateinit var IDataStoreDataSource: IDataStoreDataSource
 
-    val userProfile: Flow<UserProfile> get() = settingsConfigurationSource.getUserPreference()
+    val userProfile: Flow<UserProfile> get() = IDataStoreDataSource.getUserPreference()
 
     override fun onCreate() {
     }

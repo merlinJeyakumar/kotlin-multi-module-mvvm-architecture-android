@@ -5,7 +5,7 @@ object Configs {
     const val classpathCrashlytics = "2.7.1"
     const val classpathFirebasePerfs = "1.4.0"
     const val classpathGoogleServices = "4.3.10"
-    const val applicationId = "com.peace"
+    const val applicationId = "com.nativedevps.arch"
     const val kotlinVersion = "1.6.21"
     const val targetSdkVersion = 28
     const val minSdkVersion = 21
@@ -16,5 +16,5 @@ object Configs {
     const val versionCode = 1
     const val versionName = "1.0.0"
     const val activeCirculation = "Sprint1"
-    const val projectName = "Peace"
+    const val projectName = "Arch"
 }
