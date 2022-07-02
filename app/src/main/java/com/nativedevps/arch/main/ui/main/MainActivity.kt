@@ -8,6 +8,7 @@ import com.nativedevps.arch.R
 import com.nativedevps.arch.databinding.ActivityMainsBinding
 import com.nativedevps.arch.main.ui.splash.SplashActivity
 import com.nativedevps.support.base_class.ActionBarActivity
+import com.nativedevps.support.utility.debugging.Log
 import dagger.hilt.android.AndroidEntryPoint
 import org.jetbrains.anko.toast
 

@@ -2,10 +2,10 @@ package com.data.utility.retrofit
 
 import com.data.utility.Constant
 import com.data.utility.exception.ResultCallAdapterFactory
-import com.data.utility.gsonTypeAdapter
 import com.data.utility.interceptor.DefaultHeaderInterceptor
 import com.data.utility.interceptor.SessionHandlingInterceptor
 import com.nativedevps.support.utility.debugging.JLogI
+import com.nativedevps.support.utility.retrofit.gsonTypeAdapter
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
