@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
+        <variable
+            name="text"
+            type="String" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{text}"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="tools text" />
+
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -21,25 +33,16 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/listAdapterMaterialButton"
+                android:id="@+id/updateMaterialButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="List Adapter"
-                android:textAllCaps="false" />
+                android:text="update" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/exampleNestedMaterialButton"
+                android:id="@+id/clearMaterialButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nested Activity"
-                android:textAllCaps="false" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/datastoreMaterialButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Datastore"
-                android:textAllCaps="false" />
+                android:text="clear" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.constraintlayout.widget.ConstraintLayout>

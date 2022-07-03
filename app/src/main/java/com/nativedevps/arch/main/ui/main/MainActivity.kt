@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.nativedevps.arch.R
 import com.nativedevps.arch.databinding.ActivityMainBinding
 import com.nativedevps.arch.main.ui.base.BackgroundActionBarActivity
+import com.nativedevps.arch.main.ui.datastore_example.DataStoreExampleActivity
 import com.nativedevps.arch.main.ui.example_list.ExampleListActivity
 import com.nativedevps.arch.main.ui.nested_activity.NestedActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -33,6 +34,9 @@ class MainActivity : BackgroundActionBarActivity<ActivityMainBinding, MainViewMo
         }
         rootBinding.exampleNestedMaterialButton.setOnClickListener {
             startActivity(NestedActivity.getIntent(this@MainActivity))
+        }
+        rootBinding.datastoreMaterialButton.setOnClickListener {
+            startActivity(DataStoreExampleActivity.getIntent(this@MainActivity))
         }
     }
 

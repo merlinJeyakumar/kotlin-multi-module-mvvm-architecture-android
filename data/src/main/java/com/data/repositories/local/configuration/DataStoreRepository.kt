@@ -11,31 +11,36 @@ class DataStoreRepository @Inject constructor(
     private val userPreferenceDataStore: DataStore<UserProfile>,
     private val appConfigurationDataStore: DataStore<AppConfiguration>,
 ) : IDataStoreDataSource {
+
     override fun getUserPreference(): Flow<UserProfile> {
         return userPreferenceDataStore.data
-    }
-
-    override suspend fun updateUserPreference(
-        userProfile: UserProfile,
-    ) {
-        userPreferenceDataStore.updateData {
-            it.toBuilder().mergeFrom(userProfile).build()
-        }
-    }
-
-    override suspend fun clearUserPreference() {
-        userPreferenceDataStore.updateData {
-            it.toBuilder().clear().build()
-        }
     }
 
     override fun getAppConfiguration(): Flow<AppConfiguration> {
         return appConfigurationDataStore.data
     }
 
-    override suspend fun setAppConfiguration(appConfiguration: AppConfiguration) {
+    override suspend fun updateAppConfiguration(callback: (AppConfiguration.Builder) -> AppConfiguration) {
         appConfigurationDataStore.updateData {
-            it.toBuilder().mergeFrom(appConfiguration).build()
+            callback(it.toBuilder())
+        }
+    }
+
+    override suspend fun clearAppConfiguration() {
+        userPreferenceDataStore.updateData {
+            it.toBuilder().clear().build()
+        }
+    }
+
+    override suspend fun updateUserPreference(callback: (UserProfile.Builder) -> UserProfile) {
+        userPreferenceDataStore.updateData {
+            callback(it.toBuilder())
+        }
+    }
+
+    override suspend fun clearUserPreference() {
+        userPreferenceDataStore.updateData {
+            it.toBuilder().clear().build()
         }
     }
 }
