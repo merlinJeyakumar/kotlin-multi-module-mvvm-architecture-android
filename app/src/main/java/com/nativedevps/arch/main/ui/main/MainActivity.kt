@@ -3,14 +3,15 @@ package com.nativedevps.arch.main.ui.main
 import android.content.Context
 import android.os.Bundle
 import com.nativedevps.arch.R
-import com.nativedevps.arch.databinding.ActivityMainsBinding
+import com.nativedevps.arch.databinding.ActivityMainBinding
+import com.nativedevps.arch.main.ui.base.BackgroundActionBarActivity
 import com.nativedevps.arch.main.ui.example_list.ExampleListActivity
-import com.nativedevps.support.base_class.ActionBarActivity
+import com.nativedevps.arch.main.ui.nested_activity.NestedActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : ActionBarActivity<ActivityMainsBinding, MainViewModel>(
-    R.layout.activity_mains,
+class MainActivity : BackgroundActionBarActivity<ActivityMainBinding, MainViewModel>(
+    R.layout.activity_main,
     MainViewModel::class.java
 ) {
 
@@ -27,8 +28,11 @@ class MainActivity : ActionBarActivity<ActivityMainsBinding, MainViewModel>(
 
     private fun initListener() {
         //todo: keep your view and event listeners
-        childBinding.listAdapterMaterialButton.setOnClickListener {
+        rootBinding.listAdapterMaterialButton.setOnClickListener {
             startActivity(ExampleListActivity.getIntent(this@MainActivity))
+        }
+        rootBinding.exampleNestedMaterialButton.setOnClickListener {
+            startActivity(NestedActivity.getIntent(this@MainActivity))
         }
     }
 

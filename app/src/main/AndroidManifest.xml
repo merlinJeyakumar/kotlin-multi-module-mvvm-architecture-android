@@ -36,6 +36,7 @@
             android:configChanges="orientation"
             android:enabled="true"
             android:exported="true" />
+        <activity android:name=".main.ui.nested_activity.NestedActivity" />
     </application>
 
 </manifest>
