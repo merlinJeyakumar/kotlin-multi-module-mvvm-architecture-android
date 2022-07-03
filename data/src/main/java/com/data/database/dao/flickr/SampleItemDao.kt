@@ -19,6 +19,9 @@ abstract class SampleItemDao : BaseDao<SampleEntity>() {
     @Query("SELECT * FROM tbl_sample")
     abstract fun getPaging(): PagingSource<Int, SampleEntity>
 
+    @Query("DELETE FROM tbl_sample WHERE id = :id")
+    abstract fun delete(id: String)
+
     @Query("DELETE FROM tbl_sample")
     abstract fun clearAll()
 }

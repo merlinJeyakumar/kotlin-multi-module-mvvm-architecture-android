@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -10,7 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_simple_list_view" />
+
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -21,32 +31,16 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/listAdapterMaterialButton"
+                android:id="@+id/addMaterialButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Retrofit retrieve &amp; List Adapter"
-                android:textAllCaps="false" />
+                android:text="Add Item" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/exampleNestedMaterialButton"
+                android:id="@+id/dropMaterialButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nested Activity"
-                android:textAllCaps="false" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/datastoreMaterialButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Datastore"
-                android:textAllCaps="false" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/sqlMaterialButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sql"
-                android:textAllCaps="false" />
+                android:text="Drop" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.constraintlayout.widget.ConstraintLayout>

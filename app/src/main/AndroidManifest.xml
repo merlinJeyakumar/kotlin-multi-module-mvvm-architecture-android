@@ -38,6 +38,7 @@
             android:exported="true" />
         <activity android:name=".main.ui.nested_activity.NestedActivity" />
         <activity android:name=".main.ui.datastore_example.DataStoreExampleActivity" />
+        <activity android:name=".main.ui.sql_room_example.RoomSqlExampleActivity" />
     </application>
 
 </manifest>

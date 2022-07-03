@@ -8,6 +8,7 @@ import com.nativedevps.arch.main.ui.base.BackgroundActionBarActivity
 import com.nativedevps.arch.main.ui.datastore_example.DataStoreExampleActivity
 import com.nativedevps.arch.main.ui.example_list.ExampleListActivity
 import com.nativedevps.arch.main.ui.nested_activity.NestedActivity
+import com.nativedevps.arch.main.ui.sql_room_example.RoomSqlExampleActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -37,6 +38,9 @@ class MainActivity : BackgroundActionBarActivity<ActivityMainBinding, MainViewMo
         }
         rootBinding.datastoreMaterialButton.setOnClickListener {
             startActivity(DataStoreExampleActivity.getIntent(this@MainActivity))
+        }
+        rootBinding.sqlMaterialButton.setOnClickListener {
+            startActivity(RoomSqlExampleActivity.getIntent(this@MainActivity))
         }
     }
 
