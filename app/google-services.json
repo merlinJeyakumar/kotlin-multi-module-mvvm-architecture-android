@@ -1,0 +1,84 @@
+{
+	"project_info": {
+		"project_number": "231679134779",
+		"project_id": "peace-android-b60a3",
+		"storage_bucket": "peace-android-b60a3.appspot.com"
+	},
+	"client": [
+		{
+			"client_info": {
+				"mobilesdk_app_id": "<enter-your-valid-google-service-json>",
+				"android_client_info": {
+					"package_name": "com.nativedevps.arch"
+				}
+			},
+			"oauth_client": [
+				{
+					"client_id": "<enter-your-valid-google-service-json>",
+					"client_type": 1,
+					"android_info": {
+						"package_name": "com.nativedevps.arch",
+						"certificate_hash": "<enter-your-valid-google-service-json>"
+					}
+				},
+				{
+					"client_id": "<enter-your-valid-google-service-json>",
+					"client_type": 3
+				}
+			],
+			"api_key": [
+				{
+					"current_key": "<enter-your-valid-google-service-json>"
+				}
+			],
+			"services": {
+				"appinvite_service": {
+					"other_platform_oauth_client": [
+						{
+							"client_id": "<enter-your-valid-google-service-json>",
+							"client_type": 3
+						}
+					]
+				}
+			}
+		},
+		{
+			"client_info": {
+				"mobilesdk_app_id": "<enter-your-valid-google-service-json>",
+				"android_client_info": {
+					"package_name": "com.nativedevps.arch.development"
+				}
+			},
+			"oauth_client": [
+				{
+					"client_id": "<enter-your-valid-google-service-json>",
+					"client_type": 1,
+					"android_info": {
+						"package_name": "com.nativedevps.arch.development",
+						"certificate_hash": "<enter-your-valid-google-service-json>"
+					}
+				},
+				{
+					"client_id": "<enter-your-valid-google-service-json>",
+					"client_type": 3
+				}
+			],
+			"api_key": [
+				{
+					"current_key": "<enter-your-valid-google-service-json>"
+				}
+			],
+			"services": {
+				"appinvite_service": {
+					"other_platform_oauth_client": [
+						{
+							"client_id": "<enter-your-valid-google-service-json>",
+							"client_type": 3
+						}
+					]
+				}
+			}
+		}
+	],
+	"configuration_version": "1"
+}
