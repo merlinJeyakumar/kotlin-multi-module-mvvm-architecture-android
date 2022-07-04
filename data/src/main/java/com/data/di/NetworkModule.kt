@@ -24,7 +24,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun firebaseRepository(apiRestService: ApiRestService): RestDataSource {
+    fun restRepository(apiRestService: ApiRestService): RestDataSource {
         return RestRepository(apiRestService)
     }
 
