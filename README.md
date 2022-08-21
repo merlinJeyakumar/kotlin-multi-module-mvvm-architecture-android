@@ -39,5 +39,6 @@
  - Retrofit with Error handling (Sample added)
  - Timber (Thirdparty)
  - Custom Log class ( d, e are available within crashlytics log)
+ - Sonarqube
  
  > Some optional libraries are added into the package, listed out here [SupportLibraries.gradle.kt](https://github.com/merlinJeyakumar/android-architecture-mvvm-versions/blob/0c05a03460c34fb91462da8a49c9829d9d53bde8/buildSrc/src/main/java/libraries/SupportLibraries.gradle.kt)
