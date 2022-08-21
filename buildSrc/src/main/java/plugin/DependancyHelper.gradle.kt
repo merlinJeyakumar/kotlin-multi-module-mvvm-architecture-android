@@ -16,7 +16,6 @@ fun DependencyHandler.requiredLibraries() {
     api(RequiredLibraries.timber)
     api(RequiredLibraries.runtime_ktx)
     api(RequiredLibraries.hilt_android)
-    //api(RequiredLibraries.hilt_lifecycle_viewmodel) // STOPSHIP: hilt upgrade https://stackoverflow.com/a/67273612/10110990
     kapt(RequiredLibraries.kapt_hilt_android_compiler)
     kapt(RequiredLibraries.kapt_hilt_compiler)
     api(RequiredLibraries.databinding_runtime)
@@ -33,7 +32,6 @@ fun DependencyHandler.supportLibraries() {
     implementation(SupportLibraries.material)
     implementation(SupportLibraries.recyclerview)
     implementation(SupportLibraries.card_view)
-    implementation(SupportLibraries.material_design)
     implementation(SupportLibraries.legacy_support)
     implementation(SupportLibraries.paging_runtime)
     implementation(SupportLibraries.viewpager2)
@@ -68,6 +66,8 @@ fun DependencyHandler.networkLibraries() {
     api(NetworkLibraries.okhttp_logging_interceptor)
     api(NetworkLibraries.stetho)
     api(NetworkLibraries.stetho_okhttp3)
+    debugImplementation(NetworkLibraries.chucker_debug)
+    releaseImplementation(NetworkLibraries.chucker_release)
 }
 
 fun DependencyHandler.roomLibraries() {
@@ -98,9 +98,16 @@ fun DependencyHandler.testLibraries() {
     implementation(TestLibraries.espressoCore)
     implementation(TestLibraries.junit)
     implementation(TestLibraries.junitTest)
+
+    androidTestImplementation(TestLibraries.androidTestImplementationRobolectric)
+    androidTestAnnotationProcessor(TestLibraries.androidTestAnnotationProcessor)
+    kaptAndroidTest(TestLibraries.kaptAndroidTest)
+    testAnnotationProcessor(TestLibraries.testAnnotationProcessorHiltAndroidTesting)
+    androidTestImplementation(TestLibraries.androidTestImplementationHiltAndroidTesting)
+    testImplementation(TestLibraries.testImplementationHiltAndroidTesting)
 }
 
-fun DependencyHandler.firebaseLibraries(){
+fun DependencyHandler.firebaseLibraries() {
     implementation(FirebaseLibraries.firebase_dynamic_links)
     implementation(FirebaseLibraries.firebase_referral)
     implementation(FirebaseLibraries.firebase_authentication)
@@ -109,12 +116,29 @@ fun DependencyHandler.firebaseLibraries(){
     implementation(FirebaseLibraries.firebase_analytics)
     implementation(FirebaseLibraries.firebase_core)
     implementation(FirebaseLibraries.firebase_messaging)
+    implementation(FirebaseLibraries.playservices_coroutines)
 }
 
-fun DependencyHandler.firebaseExternalLibraries(){
+fun DependencyHandler.firebaseExternalLibraries() {
     implementation(FirebaseLibraries.firebase_database)
 }
 
-fun DependencyHandler.thirdPartyLibraries(){
+fun DependencyHandler.thirdPartyLibraries() {
     implementation(ThirdPartyLibraries.otpview_pinview)
+    implementation(ThirdPartyLibraries.indicator)
+}
+
+fun DependencyHandler.composeLibraries() {
+    implementation("androidx.compose.ui:ui:1.1.1")
+    // Tooling support (Previews, etc.)
+    implementation("androidx.compose.ui:ui-tooling:1.1.1")
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    implementation("androidx.compose.foundation:foundation:1.1.1")
+    // Material Design
+    implementation("androidx.compose.material:material:1.1.1")
+    // Material design icons
+    implementation("androidx.compose.material:material-icons-core:1.1.1")
+    implementation("androidx.compose.material:material-icons-extended:1.1.1")
+    // Integration with observables
+    implementation("androidx.compose.runtime:runtime-livedata:1.1.1")
 }

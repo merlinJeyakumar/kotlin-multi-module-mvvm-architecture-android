@@ -1,4 +1,8 @@
+apply(plugin = "org.sonarqube")
+
 plugins {
+    id("org.jetbrains.kotlin.android") version Configs.kotlinVersion apply false
+    id("org.sonarqube") version Configs.sonarqube
     `kotlin-dsl`
 }
 
@@ -22,6 +26,7 @@ buildscript {
         classpath(ProjectRootLibraries.classPathGoogleService)
         classpath(ProjectRootLibraries.classPathFirebasePerfs)
         classpath(ProjectRootLibraries.classpathCrashlytics)
+        classpath(ProjectRootLibraries.sonarqube)
     }
 }
 
@@ -29,6 +34,7 @@ allprojects {
     repositories {
         mavenCentral()
         maven(url = "https://www.jitpack.io")
+        maven { url = uri("https://plugins.gradle.org/m2/") }
         jcenter()
         google()
     }
