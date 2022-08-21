@@ -16,7 +16,7 @@ fun DependencyHandler.requiredLibraries() {
     api(RequiredLibraries.timber)
     api(RequiredLibraries.runtime_ktx)
     api(RequiredLibraries.hilt_android)
-    api(RequiredLibraries.hilt_lifecycle_viewmodel)
+    //api(RequiredLibraries.hilt_lifecycle_viewmodel) // STOPSHIP: hilt upgrade https://stackoverflow.com/a/67273612/10110990
     kapt(RequiredLibraries.kapt_hilt_android_compiler)
     kapt(RequiredLibraries.kapt_hilt_compiler)
     api(RequiredLibraries.databinding_runtime)
@@ -29,6 +29,7 @@ fun DependencyHandler.supportLibraries() {
     implementation(SupportLibraries.support_design)
     implementation(SupportLibraries.constraintLayout)
     implementation(SupportLibraries.sdp_android)
+    implementation(SupportLibraries.ssp_android)
     implementation(SupportLibraries.material)
     implementation(SupportLibraries.recyclerview)
     implementation(SupportLibraries.card_view)

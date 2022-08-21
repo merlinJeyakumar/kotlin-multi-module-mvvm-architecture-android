@@ -3,8 +3,8 @@ package libraries
 object Versions {
 
     // Required Core Libraries
-    const val appCompatVersion = "1.4.0-beta01" //todo: https://androidx.tech/artifacts/appcompat/appcompat/
-    const val core_ktx = "1.7.0-beta02" //todo: https://androidx.tech/artifacts/core/core-ktx/
+const val appCompatVersion = "1.4.1" //todo: https://androidx.tech/artifacts/appcompat/appcompat/
+    const val core_ktx = "1.7.0" //todo: https://androidx.tech/artifacts/core/core-ktx/
     const val multi_dex = "2.0.1"
     const val lifecycle_extension = "2.2.0"
     const val coroutines_android = "1.6.0" //https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-android
@@ -19,8 +19,8 @@ object Versions {
     const val runtime_ktx = "2.2.0"
     const val viewmodel_ktx = "2.2.0"
     const val livedata_ktx = "2.2.0"
-    const val hilt_android = "2.38.1"
-    const val hilt_android_compiler = "2.38.1"
+    const val hilt_android = "2.41"
+    const val hilt_android_compiler = "2.41"
     const val hilt_compiler = "1.0.0"
     const val hilt_lifecycle_viewmodel = "1.0.0-alpha03" //todo: https://androidx.tech/artifacts/hilt/hilt-lifecycle-viewmodel/
     const val databinding_runtime = "7.0.1"
@@ -29,9 +29,10 @@ object Versions {
 
     // Support Libraries
     const val constraintLayoutVersion = "2.0.4"
-    const val materialVersion = "1.5.0-beta01" //todo: https://github.com/material-components/material-components-android/releases
+    const val materialVersion = "1.5.0" //todo: https://github.com/material-components/material-components-android/releases
     const val support_design = "28.0.0"
     const val sdp_android = "1.0.6"
+    const val ssp_android = "1.0.0"
     const val recyclerView = "1.3.0-alpha01" //todo: https://androidx.tech/artifacts/recyclerview/recyclerview/
     const val card_view = "1.0.0"
     const val material_design = "1.1.0-beta02" //todo: https://github.com/material-components/material-components-android/releases
