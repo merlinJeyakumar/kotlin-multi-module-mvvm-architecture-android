@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "your-google-project-number",
+    "project_id": "your-google-project-id",
+    "storage_bucket": "your-google-bucket-name"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "your-google-app-id",
+        "android_client_info": {
+          "package_name": "com.nativedevps.arch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "your-google-client-id",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAppSwbzwaAOilskcu3_GA5fOpbtinCHxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "your-google-client-id",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "your-google-app-id",
+        "android_client_info": {
+          "package_name": "com.nativedevps.arch.development"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "your-google-client-id",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "your-google-api-key"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "your-google-client-id",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
