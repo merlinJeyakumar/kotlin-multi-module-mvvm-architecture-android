@@ -1,8 +1,6 @@
-# Readme
+# Repository
+ This directory having sources are seperately maintained, take a clone from there [Android Compact Dependencies](https://github.com/merlinJeyakumar/android-compact-dependencies.git)
 
-### Remind to update
- - Alpha, Beta Packages
-
-### resource
- - androidx  https://androidx.tech
- - material https://github.com/material-components/material-components-android/releases
+# Motivation
+Building a Industrial application architecture with less effort and highly maintainable
+ 
