@@ -11,7 +11,7 @@
 
 
 # Do you feel this Architecture was extremely hard? then take a look at
- ``` Single modularized with clean architecture principle ``` > [kotlin-multi-module-mvvm-architecture-android](https://github.com/merlinJeyakumar/kotlin-single-module-architecture-android.git)
+ ``` Single modularized with clean architecture principle ``` > [kotlin-single-module-architecture-android](https://github.com/merlinJeyakumar/kotlin-single-module-architecture-android.git)
 
 # Motivation
 Building a Industrial application architecture with less effort and highly maintainable
