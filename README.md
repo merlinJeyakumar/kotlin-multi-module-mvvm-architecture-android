@@ -1,4 +1,3 @@
-
 # kotlin-multi-module-mvvm-architecture-android #
 
 
