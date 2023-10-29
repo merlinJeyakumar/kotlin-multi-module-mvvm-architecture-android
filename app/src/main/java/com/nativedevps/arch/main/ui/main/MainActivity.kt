@@ -1,60 +1,65 @@
 package com.nativedevps.arch.main.ui.main
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import androidx.lifecycle.asLiveData
+import com.domain.model.user_list.UsersListResponseModel
 import com.nativedevps.arch.R
-import com.nativedevps.arch.databinding.ActivityMainsBinding
-import com.nativedevps.arch.main.ui.splash.SplashActivity
-import com.nativedevps.support.base_class.ActionBarActivity
+import com.nativedevps.arch.databinding.ActivityMainBinding
+import com.nativedevps.arch.main.ui.main.adapter.UserAdapter
+import com.nativedevps.support.base_class.AbstractRecyclerAdapter
+import com.nativedevps.support.base_class.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
-import org.jetbrains.anko.toast
+
 
 @AndroidEntryPoint
-class MainActivity : ActionBarActivity<ActivityMainsBinding, MainViewModel>(
-    R.layout.activity_mains,
+class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
+    R.layout.activity_main,
     MainViewModel::class.java
 ) {
 
     override fun onInit(savedInstanceState: Bundle?) {
-        super.onInit(savedInstanceState)
-        initData()
-        initListener()
-        initPreview()
+        TODO("Not yet implemented")
     }
 
-    private fun initData() {
-        viewModel.userProfile.asLiveData().observe(this, { userProfile ->
-            /*if (userProfile.emailId.isNullOrEmpty()) { //todo: optional
-                initFreshLogin()
-                return@observe
-            }*/
-            childBinding.userProfile = userProfile
-        })
+    private fun initView() = with(binding) {
+        //noop
+    }
 
-        viewModel.retrieveUserProfile { success, model, error ->
-            if (success) {
-                toast("Profile updated!")
-            } else {
-                toast("failed: $error")
-            }
+    /*
+    * Collect information from Rest API and Cache on the DataStorePreference
+    * persistance and update with a UI
+    */
+    private fun initData() = with(viewModel) {
+        //todo:
+    }
+
+
+    /*
+    *Initial rendering have no-operations
+    */
+    private fun initPreview() = with(binding) {
+        //noop
+    }
+
+
+    private val itemListener = object :
+        AbstractRecyclerAdapter.ItemListener<UsersListResponseModel.Data>() {
+        override fun optionSelected(position: Int, item: UsersListResponseModel.Data, option: Int) {
+            //todo
+        }
+
+        override fun itemSelected(position: Int, item: UsersListResponseModel.Data) {
+            //todo
         }
     }
 
-    private fun initFreshLogin() {
-        startActivity(Intent(this, SplashActivity::class.java))
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-        finishAffinity()
-    }
+    /*
+    * Reusing list from adapter to avoid persistance and network
+    */
+    private val currencyModelList get() = userAdapter.getList()
 
-    private fun initListener() {
-    }
-
-    private fun initPreview() {
-    }
-
-    override fun getLocale(context: Context): String? {
-        return SplashActivity.language
+    private val userAdapter: UserAdapter by lazy {
+        return@lazy UserAdapter().also {
+            it.setListener(itemListener)
+        }
     }
 }

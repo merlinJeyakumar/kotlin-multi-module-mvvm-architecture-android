@@ -7,7 +7,9 @@ plugins {
 }
 
 android {
-    setCompileSdkVersion(Configs.compileSdkVersion)
+    namespace = "com.data"
+    compileSdk = Configs.compileSdkVersion
+
     defaultConfig {
         setMinSdkVersion(Configs.minSdkVersion)
         setTargetSdkVersion(Configs.targetSdkVersion.toString())
@@ -20,6 +22,12 @@ android {
     buildFeatures {
         viewBinding = true
         dataBinding = true
+        buildConfig = true
+    }
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(17))
+        }
     }
 }
 
@@ -31,8 +39,9 @@ dependencies {
     roomLibraries()
     dateTimeLibraries()
     networkLibraries()
-    firebaseLibraries()
-    dataStoreLibraries()
+    //firebaseLibraries()
+    //dataStoreLibraries()
+    dataStoreLite()
     implementation(GoogleMiscLibraries.playservices_auth)
     implementation(GoogleMiscLibraries.google_sheets){
         exclude("org.apache.httpcomponents")

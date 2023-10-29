@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.nativedevps.arch">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -19,21 +18,16 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name="com.nativedevps.arch.main.ui.splash.SplashActivity">
+        <activity
+            android:name="com.nativedevps.arch.main.ui.main.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.nativedevps.arch.main.ui.main.MainActivity"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:exported="true"
-            android:enabled="true"
-            android:name="com.nativedevps.arch.main.ui.example_list.ExampleListActivity"
-            android:configChanges="orientation" />
     </application>
 
 </manifest>

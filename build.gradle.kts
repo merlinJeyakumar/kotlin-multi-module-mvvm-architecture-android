@@ -1,12 +1,13 @@
 plugins {
+    id("org.jetbrains.kotlin.android") version "1.8.20" apply false
     `kotlin-dsl`
+    `maven-publish`
 }
 
 buildscript {
 
     extra["minSdkVersion"] = Configs.minSdkVersion
     extra["compileSdkVersion"] = Configs.compileSdkVersion
-    extra["targetSdkVersion"] = Configs.targetSdkVersion.toString()
 
     repositories {
         mavenCentral()
@@ -19,8 +20,8 @@ buildscript {
         classpath(ProjectRootLibraries.classpathGradle)
         classpath(ProjectRootLibraries.classpathKotlinGradle)
         classpath(ProjectRootLibraries.classpathDaggerHiltVersion)
-        classpath(ProjectRootLibraries.classPathGoogleService)
-        classpath(ProjectRootLibraries.classPathFirebasePerfs)
+        //classpath(ProjectRootLibraries.classPathGoogleService)
+        //classpath(ProjectRootLibraries.classPathFirebasePerfs)
         classpath(ProjectRootLibraries.classpathCrashlytics)
     }
 }

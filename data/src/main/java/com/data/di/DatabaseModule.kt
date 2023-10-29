@@ -2,7 +2,7 @@ package com.data.di
 
 import android.content.Context
 import com.data.database.RoomManager
-import com.data.database.dao.flickr.SampleItemDao
+import com.data.database.dao.SampleItemDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,8 +15,8 @@ import javax.inject.Singleton
 object DatabaseModule {
 
     @Provides
-    fun provideSampleDao(appDatabase: RoomManager): SampleItemDao {
-        return appDatabase.sampleItemDao
+    fun provideSampleDao(roomManager: RoomManager): SampleItemDao {
+        return roomManager.sampleItemDao
     }
 
     @Provides

@@ -1,5 +1,8 @@
-rootProject.name = 'Peace'
-include ':app', ':support', ':data', ':domain'
-project(':support').projectDir = new File(rootDir, 'modules/jeyksupport')
+rootProject.name = 'kotlin-multi-module-mvvm-architecture-android'
+include ':app', ':data', ':domain'
 project(':data').projectDir = new File(rootDir, 'data')
 project(':domain').projectDir = new File(rootDir, 'domain')
+
+
+include ':jeyksupport'
+project(':jeyksupport').projectDir = new File(rootDir, 'modules/jeyksupport')
